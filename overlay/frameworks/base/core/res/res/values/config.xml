@@ -107,5 +107,7 @@
     <integer name="config_screenBrightnessDim">10</integer>
 
     <!-- Button illumination -->
+    <!-- OFF FOR NOW
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+    -->
 </resources>
