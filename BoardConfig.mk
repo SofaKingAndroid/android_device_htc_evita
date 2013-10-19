@@ -33,6 +33,9 @@ TARGET_BOARD_INFO_FILE ?= device/htc/evita/board-info.txt
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := evita
 
+# Assert		
+TARGET_OTA_ASSERT_DEVICE := evita
+
 # Kernel
 TARGET_KERNEL_CONFIG := elite_defconfig
 
@@ -80,6 +83,10 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/htc/evita/rootdir/etc/fstab.qcom
+
+# Flags for Krait CPU / tune for cortex-a9
+COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
+TARGET_EXTRA_CFLAGS := -mcpu=cortex-a9 -mtune=cortex-a15
 
 # TWRP
 DEVICE_RESOLUTION := 720x1280
